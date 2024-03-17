@@ -138,6 +138,9 @@ class _LoginFormState extends State<LoginForm> {
           ),
           TextButton(
             onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: ColorCollection.pink_A700,
+            ),
             child: const Text('Забыли пароль?'),
           ),
         ],
