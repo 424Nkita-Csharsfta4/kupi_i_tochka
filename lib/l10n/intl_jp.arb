@@ -1,0 +1,20 @@
+{
+    "Entrance": "入り口",
+    "Registration": "登録",
+    "Phone": "電話",
+    "Phonenumber": "電話番号",
+    "Password": "パスワード",
+    "Signin": "サインイン",
+    "Forgotyourpassword": "パスワードをお忘れですか？",
+    "Repeatthepassword": "パスワードを再入力",
+    "Iagreewith": "に同意します",
+    "Termsandconditionsofuse": "利用規約",
+    "Newpassword": "新しいパスワード",
+    "Setanewpasswordandconfirmittocompletethereset": "パスワードを設定して、リセットを完了させてください。",
+    "Confirmpassword": "パスワードを確認",
+    "Acknowledge": "認める",
+    "Passwordrecovery": "パスワードの回復",
+    "Resendcode": "コードを再送信",
+    "Entercode": "コードを入力してください",
+    "Enterthecodesentto": "+373 777 88 999に送信されたコードを入力してください"
+}

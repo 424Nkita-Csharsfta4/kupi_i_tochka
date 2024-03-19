@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kupi_i_tochka/generated/l10n.dart';
 import 'package:kupi_i_tochka/theme/color_collection.dart';
 
 class Login extends StatelessWidget {
@@ -6,10 +7,10 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
+    return TextField(
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        hintText: 'Телефон',
+        border: const OutlineInputBorder(),
+        hintText: S.of(context).Phone,
       ),
     );
   }
@@ -21,8 +22,8 @@ class Tabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final kTabs = <Tab>[
-      const Tab(text: 'Вход'),
-      const Tab(text: 'Регистрация'),
+      Tab(text: S.of(context).Entrance),
+      Tab(text: S.of(context).Registration),
     ];
     return DefaultTabController(
       length: kTabs.length,

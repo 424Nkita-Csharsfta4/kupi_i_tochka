@@ -1,0 +1,20 @@
+{
+    "Entrance": "Entrance",
+    "Registration": "Registration",
+    "Phone": "Phone",
+    "Phonenumber": "Phone number",
+    "Password": "Password",
+    "Signin": "Sign in",
+    "Forgotyourpassword": "Forgot your password?",
+    "Repeatthepassword":"Repeat the password",
+    "Iagreewith":"I agree with",
+    "Termsandconditionsofuse":"Terms and conditions of use",
+    "Newpassword":"New password",
+    "Setanewpasswordandconfirmittocompletethereset":"Set a new password and confirm it to complete the reset.",
+    "Confirmpassword":"Confirm password",
+    "Acknowledge":"Acknowledge",
+    "Passwordrecovery":"Password recovery",
+    "Resendcode":"Resend code",
+    "Entercode":"Enter code ",
+    "Enterthecodesentto":"Enter the code sent to +373 777 88 999"
+}

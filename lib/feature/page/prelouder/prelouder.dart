@@ -1,23 +1,50 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kupi_i_tochka/core/presentation/cubit/prelouder_cubit.dart';
+import 'package:kupi_i_tochka/core/presentation/bloc/prelouder/prelouder_bloc.dart';
 import 'package:kupi_i_tochka/core/presentation/screens/login_screen.dart';
 
-class Prelouder extends StatelessWidget {
+class Prelouder extends StatefulWidget {
   const Prelouder({Key? key}) : super(key: key);
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _PrelouderState createState() => _PrelouderState();
+}
+
+class _PrelouderState extends State<Prelouder>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  final bool _loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+    Timer(const Duration(seconds: 5), () {
+      _controller.reverse().then((_) {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (_) => const LoginScreen()));
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoaderCubit(),
-      child: BlocBuilder<LoaderCubit, LoaderState>(
+      create: (context) => LoaderBloc(),
+      child: BlocBuilder<LoaderBloc, LoaderState>(
         builder: (context, state) {
           return Stack(
             children: [
               _buildContent(context),
-              if (state is LoaderVisible) _buildLoader(),
+              if (_loading) _buildLoader(),
+              if (!_loading) _buildLoginScreen(),
             ],
           );
         },
@@ -39,15 +66,6 @@ class Prelouder extends StatelessWidget {
   }
 
   Widget _buildContent(BuildContext context) {
-    // Добавляем задержку перед переходом на LoginScreen
-    Future.delayed(const Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
-        ),
-      );
-    });
-
     return Container(
       color: const Color(0xfffff8f9),
       child: Column(
@@ -60,8 +78,7 @@ class Prelouder extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage(
-                    'https://sun9-30.userapi.com/impg/uwBzlrLH92MV23gY_Py8UHYhB6JHcnj3syDk4Q/e5MooVFECuw.jpg?size=114x114&quality=96&sign=8ffe2d76d64a67c9849cdf0fa3c4ce92&type=album'),
+                image: AssetImage('assets/image/logo.png'),
               ),
             ),
           ),
@@ -72,5 +89,18 @@ class Prelouder extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget _buildLoginScreen() {
+    return FadeTransition(
+      opacity: _animation,
+      child: const LoginScreen(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }

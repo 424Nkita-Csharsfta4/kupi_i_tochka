@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kupi_i_tochka/generated/l10n.dart';
 import 'package:kupi_i_tochka/theme/color_collection.dart';
 
 class RegistrationForm extends StatefulWidget {
@@ -39,7 +40,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
           TextFormField(
             obscureText: _isObscurePassword,
             decoration: InputDecoration(
-              labelText: 'Пароль',
+              labelText: S.of(context).Password,
               border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(100.0)),
               ),
@@ -64,7 +65,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
           TextFormField(
             obscureText: _isObscureRepeatPassword,
             decoration: InputDecoration(
-              labelText: 'Повторите пароль',
+              labelText: S.of(context).Repeatthepassword,
               border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(100.0)),
               ),
@@ -90,14 +91,14 @@ class _RegistrationFormState extends State<RegistrationForm> {
             title: RichText(
               text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
-                children: const [
+                children: [
                   TextSpan(
-                    text: 'Я согласен с ',
-                    style: TextStyle(color: Colors.black),
+                    text: S.of(context).Iagreewith,
+                    style: const TextStyle(color: Colors.black),
                   ),
                   TextSpan(
-                    text: 'Правилами и условиями использования',
-                    style: TextStyle(color: ColorCollection.pink_A700),
+                    text: S.of(context).Termsandconditionsofuse,
+                    style: const TextStyle(color: ColorCollection.pink_A700),
                   ),
                 ],
               ),
@@ -131,9 +132,9 @@ class _RegistrationFormState extends State<RegistrationForm> {
                 const Size.fromHeight(50.0),
               ),
             ),
-            child: const Text(
-              'Зарегистрироваться',
-              style: TextStyle(color: ColorCollection.white_A700),
+            child: Text(
+              S.of(context).Registration,
+              style: const TextStyle(color: ColorCollection.white_A700),
             ),
           ),
         ],
