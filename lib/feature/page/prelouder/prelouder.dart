@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kupi_i_tochka/core/presentation/bloc/prelouder/prelouder_bloc.dart';
-import 'package:kupi_i_tochka/core/presentation/screens/login_screen.dart';
+import 'package:kupi_i_tochka/feature/page/login/presentation/login_screen.dart';
 
 class Prelouder extends StatefulWidget {
   const Prelouder({Key? key}) : super(key: key);
