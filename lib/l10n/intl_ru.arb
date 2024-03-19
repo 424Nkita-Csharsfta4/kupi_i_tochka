@@ -1,0 +1,20 @@
+{
+    "Entrance": "Вход",
+    "Registration": "Регистрация",
+    "Phone": "Телефон",
+    "Phonenumber": "Номер телефона",
+    "Password": "Пароль",
+    "Signin": "Войти",
+    "Forgotyourpassword": "Забыли пароль?",
+    "Repeatthepassword": "Повторите пароль",
+    "Iagreewith": "Я соглашаюсь с",
+    "Termsandconditionsofuse": "Условиями использования",
+    "Newpassword": "Новый пароль",
+    "Setanewpasswordandconfirmittocompletethereset": "Установите новый пароль и подтвердите его, чтобы завершить сброс.",
+    "Confirmpassword": "Подтвердите пароль",
+    "Acknowledge": "Подтверждаю",
+    "Passwordrecovery": "Восстановление пароля",
+    "Resendcode": "Отправить код повторно",
+    "Entercode": "Введите код",
+    "Enterthecodesentto": "Введите код, отправленный на номер +373 777 88 999"
+}
