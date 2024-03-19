@@ -21,11 +21,9 @@ class S {
     assert(_current != null,
         'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
-
-    
   }
 
-   String get localeName {
+  String get localeName {
     return Intl.message(
       Intl.defaultLocale ?? 'en',
       name: 'localeName',

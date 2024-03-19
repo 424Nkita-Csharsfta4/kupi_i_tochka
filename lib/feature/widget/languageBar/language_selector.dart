@@ -103,18 +103,18 @@ class LanguageSelector extends StatelessWidget {
     );
   }
 
-  // Убедитесь, что метод AnimatedDialog находится внутри класса LanguageSelector
+  // ignore: non_constant_identifier_names
   void AnimatedDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Animated Dialog Title'),
-          content: Text('Animated Dialog Content'),
+          title: const Text('Animated Dialog Title'),
+          content: const Text('Animated Dialog Content'),
           actions: <Widget>[
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: Text('Close'),
+              child: const Text('Close'),
             ),
           ],
         );

@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kupi_i_tochka/core/presentation/bloc/login/login_bloc.dart';
 import 'package:kupi_i_tochka/core/presentation/bloc/login/login_event_bloc.dart';
 import 'package:kupi_i_tochka/core/presentation/bloc/login/login_state_bloc.dart';
-import 'package:kupi_i_tochka/core/presentation/screens/registration_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kupi_i_tochka/feature/page/registration/presentation/registration_screen.dart';
 import 'package:kupi_i_tochka/feature/widget/languageBar/language_selector.dart';
 import 'package:kupi_i_tochka/generated/l10n.dart';
 
